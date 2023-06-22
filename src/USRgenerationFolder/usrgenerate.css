@@ -1,0 +1,23 @@
+#input{
+    width: 80%;
+    height:40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow:5px 5px #888888;
+}
+#submit{
+    margin-top: 35px;
+    color: white;
+    background-color: green;
+    width: 35%;
+    border-radius: 8px;
+}
+#discourse_name{
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 35%;
+    height: 20px;
+}
+#sentences{
+    row-gap: 10px;
+}
