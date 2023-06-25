@@ -94,7 +94,8 @@ const Sentences = () => {
         </p>
       ))}
       <div className='alignPagination'>
-        <Pagination count={pageCount} size="large" page={page} onChange={handleChangePage} />
+        
+        {/* <Pagination count={pageCount} size="small" page={page} onChange={handleChangePage} /> */}
       </div>
 
 

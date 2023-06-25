@@ -8,6 +8,7 @@ import fifth_one from "./fifth_one.png"
 import sixth_one from "./sixth_one.png"
 import {FaEnvelope,FaPhone,FaMobile} from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
+
 const Home = () => {
   return (
     

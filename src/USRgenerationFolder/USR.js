@@ -436,11 +436,12 @@ const USR = () => {
   return (
     loading ? <div>Loading...</div> :
       <>
+
         <div className="usrBtnControls">
-          <Button sx={{ margin: '5px' }} variant="contained" onClick={viewTable} disabled={reviewStatus === "In Review"}>Edit</Button>
-          <Button sx={{ margin: '5px' }} variant="contained" onClick={() => saveChanges()} disabled={reviewStatus === "In Review"}>Save</Button>
-          <Button sx={{ margin: '5px' }} variant="contained" onClick={saveDownload}>Save & Download</Button>
-          <Button sx={{ margin: '5px' }} variant="contained" onClick={submitForReview} disabled={reviewStatus === "In Review"}>Submit for Review</Button>
+          <Button sx={{ margin: '5px' }} variant="contained" onClick={viewTable} disabled={reviewStatus === "In Review"} id="but">Edit</Button>
+          <Button sx={{ margin: '5px' }} variant="contained" onClick={() => saveChanges()} disabled={reviewStatus === "In Review"} id="but">Save</Button>
+          <Button sx={{ margin: '5px' }} variant="contained" onClick={saveDownload} >Save & Download</Button>
+          <Button sx={{ margin: '5px' }} variant="contained" onClick={submitForReview} disabled={reviewStatus === "In Review"}  id="but">Submit for Review</Button>
           <br></br><label htmlFor="status">Status:</label><input type="text" id="status" value={reviewStatus} readOnly />
         </div>
 

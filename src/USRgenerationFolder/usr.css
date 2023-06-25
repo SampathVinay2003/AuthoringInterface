@@ -197,5 +197,7 @@ td {
 .entry_components {
   display: flex;
 }
-
-
+#but{
+  width:30px;
+  height:30px;
+}

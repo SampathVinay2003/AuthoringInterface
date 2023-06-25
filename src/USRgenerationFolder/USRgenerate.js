@@ -6,7 +6,7 @@ import Sentences from './Sentences';
 import USR from './USR';
 import { CircularProgress } from '@mui/material';
 import { useNavigate } from "react-router-dom";
-
+import "./usrgenerate.css";
 
 const USRgenerate = () => {
   const [discourse, setDiscourse] = useState('');
@@ -207,19 +207,22 @@ const USRgenerate = () => {
         <div className="entry_components">
           <div className="tta1">
             <p className="lab_discourse">Discourse</p>
-            <textarea id="sentences" name="discourse" type="text" value={discourse} onChange={handleDiscourseContent} ></textarea></div>
+            <textarea id="sentences" name="discourse" type="text" value={discourse}  rows="4" cols="40" onChange={handleDiscourseContent} ></textarea></div>
           <div className="tta2">
             <div className="label_discourse" ><p>Enter discourse name:</p></div>
-            <input id="discourse_name" name="discourse_name" value={discourse_name} type="text" onChange={handleDiscourseName} />
+            <input id="discourse_name" name="discourse_name" value={discourse_name} type="text" onChange={handleDiscourseName}/>
           </div>
+          <br></br>
           {/* <div className="ttab2"><input type='button' name="Save Sentences"  value="Save discourse" disabled='True' /></div> */}
           <div className="ttab3">
             <input type='file' onChange={handleFileSelection} />
             {/* <input type='submit' name="Generate USR" onClick={saveChanges} value="USR Generate" disabled={!sentences} /> */}
             {/* <div className="ttab1"></div> */}
-            <input type='button' name="Generate USR" value="USR Generate" disabled={!discourse} onClick={handleAutomaticGeneratedUSRs} />
-          </div>
-        </div>
+            </div>
+            </div>
+            <br/>
+            <input type='button' name="Generate USR" value="USR Generate" id="bigbutton" disabled={!discourse} onClick={handleAutomaticGeneratedUSRs} />
+        
       </form>
     );
   }
@@ -250,7 +253,7 @@ const USRgenerate = () => {
   return (
     <>
       {renderUSRGenereateForm()}
-      {loading ? <CircularProgress sx={{ alignItems: 'center' }} color="secondary" /> : renderUSRContent()}
+      {loading ? <CircularProgress sx={{ alignItems: 'center' }} /> : renderUSRContent()}
     </>
   )
 };
